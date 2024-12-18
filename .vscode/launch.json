@@ -5,41 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Streamlit App (Main)",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-        {
-            "name": "Python: Run Main with args",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "Alpinestreamlit.main",
-            "args": ["-w", "world"],
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-        {
-            // This example launch-config promtps for arguments.
-            // You can tinker with it to specifically ask for arguments you have defined.
-            // To do so, create apropriate inputs and reference them here.
-            "name": "Python: Main, prompt for args",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "Alpinestreamlit.main",
-            "args": ["${input:args}"],
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-    ],
-    "inputs": [
-        {
-          "id": "args",
-          "type":"promptString",
-          "description": "Arguments for main",
-          "default": "-w word"
-        },
-      ]
+            "module": "streamlit",
+            "envFile": "${workspaceFolder}/.env",
+            // replace with your package name
+            "args": ["run", "src/streamlit_bootcamp_uXXXXXX/main.py"]
+        }
+    ]
 }

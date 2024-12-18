@@ -1,3 +1,4 @@
+
 repos:
   - repo: local
     hooks:
@@ -44,15 +45,14 @@ repos:
 
       - id: pylint
         name: pylint
-        entry: env PYTHONPATH='src/Alpinestreamlit/:tests/Alpinestreamlit/' pylint
+        entry: env PYTHONPATH='src/streamlit_bootcamp_uXXXXXX/' pylint
         language: system
         require_serial: true
         types: [python]
         pass_filenames: false
         files: '\.py$'
         args:
-          [
-            'src', 'tests',
+          ['src',
             '-rn', # Only display messages
             '-sn', # Don't display the score
           ]
@@ -67,15 +67,3 @@ repos:
         require_serial: true
         additional_dependencies: []
         minimum_pre_commit_version: '2.9.2'
-
-      - id: unittest-run
-        name: unittest-run
-        entry: coverage run
-        pass_filenames: false
-        language: system
-
-      - id: unittest-coverage-report
-        name: unittest-coverage-report
-        entry: coverage xml
-        pass_filenames: false
-        language: system
