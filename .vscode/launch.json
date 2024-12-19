@@ -11,7 +11,7 @@
             "module": "streamlit",
             "envFile": "${workspaceFolder}/.env",
             // replace with your package name
-            "args": ["run", "src/streamlit_bootcamp_uXXXXXX/main.py"]
+            "args": ["run", "src/Alpinestreamlit/main.py"]
         }
     ]
 }
