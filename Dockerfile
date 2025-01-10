@@ -49,8 +49,4 @@ COPY --from=builder /app/.venv /app/.venv
 # copy source again (because streamlit needs file to execute)
 COPY --from=builder /app/src /app/src
 
-ENV STREAMLIT_SERVER_PORT=8050
-
-EXPOSE 8050
-
 CMD ["streamlit", "run", "/app/src/Alpinestreamlit/main.py"]
